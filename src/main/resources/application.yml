@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/aceprep
+    username: postgres
+    password: postgres
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+  flyway:
+    enabled: true
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+jwt:
+  secret: dGVzdHNlY3JldGtleQ==
+  expiration: 86400000
+  refresh-expiration: 604800000
+
+app:
+  rag:
+    top-k: 10
+
+  agent:
+    max-iterations: 10
